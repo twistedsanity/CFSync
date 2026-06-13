@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN python -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade pip
 
 # Install dependencies to a specific folder
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
