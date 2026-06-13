@@ -1,4 +1,4 @@
-FROM python:3.12-slim AS builder
+FROM python:3.13-slim AS builder
 
 # Set working directory
 WORKDIR /app
@@ -12,7 +12,7 @@ RUN python3 -m pip install --upgrade pip
 # Install dependencies to a specific folder
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 # Install packages
 RUN apt-get update && apt-get install -y sshpass && rm -rf /var/lib/apt/lists/*
