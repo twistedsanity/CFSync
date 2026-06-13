@@ -5,6 +5,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN apt-get update && apt-get upgrade
+
 RUN python3 -m pip install --upgrade pip
 
 # Install dependencies to a specific folder
